@@ -21,9 +21,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        changeColorBox()
+    }
     
-    @IBAction func changeColorBox(_ sender: Any) {
+    @IBAction func sliderValueChanged(_ sender: Any) {
         print("slider changed")
+        changeColorBox()
+    }
+    
+    func changeColorBox(){
+        let redValue = CGFloat(redSlider.value)
+        let blueValue = CGFloat(blueSlider.value)
+        let greenValue = CGFloat(greenSlider.value)
+        
+        colorBoxView.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1)
     }
 }
 
