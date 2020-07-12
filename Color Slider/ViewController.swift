@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +29,7 @@ class ViewController: UIViewController {
         changeColorBox()
     }
     
+    /// Updates the background color of the colorBoxView based on the values of the sliders.
     func changeColorBox(){
         let redValue = CGFloat(redSlider.value)
         let blueValue = CGFloat(blueSlider.value)
